@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习</title>
+    <style>
+        body{
+            background: linear-gradient(to right, #ffabab, #ffee65);
+            height: 100vh;
+            margin: 0%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 模拟目录代码 -->
+    <div>
+        <h1><a name="T">学习主页</a></h1>
+        <h5><a href="#tpbq">表格标签</a></h5>
+        <h5><a href="##wbbq">文本标签</a></h5>
+        <h5><a href="#bgbq">表格标签</a></h5>
+        <h5><a href="#tzym">跳转页面</a></h5>
+        <h5><a href="#mdbq">描点标签</a></h5>
+        <h5><a href="#khykl">跨行与跨列</a></h5>
+        <h5><a href="#hhbq" align="center">换行标签</a></h5>
+        <h5><a href="#bdbq" align="center">表单标签</a></h5>
+        <h3><a href="#kjbq">框架标签</a></h3>
+        <h5><a href="#zfst">字符实体</a></h5>
+        <h5><a href="#qjsx">全局属性</a></h5>
+    </div>
+    <h1>
+        <a href="https://pvp.qq.com/">惊喜</a>
+    </h1>
+    <!-- 加注释:Ctrl+/ -->
+    <!-- 块级元素与行内元素 -->
+    <div>
+        <p>安装的所有插件:1、Live Server</p>
+    <div>块级元素：独占一行（排版标签都是块级元素）</div>
+    <span>行内元素：不独占一行</span>
+    <span>1、使用规则：块级元素中能些行内元素和块级元素
+            2、行内元素中能写行内元素，但不能写块级元素
+    </span>
+    </div>
+    <!-- 文本标签 -->
+    <a name="wbbq"></a>
+    <a>
+        <h1>文本标签</h1>
+        <h6>1、用于包裹：词汇、短语等<br>
+            2、通常卸载排版标签里面<br>
+            3、排版标签更宏观（大段文字），文本标签更微观（词汇、短语）<br>
+            4、文本标签通常都是行内元素
+        </h6><br>
+    </a>
+     <!-- 常用的 -->
+    <a name="bgbq"></a>
+    <a href="#T">回到头部</a>
+    <table>
+        <thead>
+            <tr>
+                <td><h3>标签名</h3></td>
+                <td>标签语义</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>em</td>
+                <td>要着重阅读的内容</td>
+            </tr>
+            <tr>
+                <td>strong</td>
+                <td>十分重要的内容（语气比em要强）</td>
+            </tr>
+            <tr>
+                <td>span</td>
+                <td>没有语义，用于包裹短语的通用容器</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <!-- 图片标签 -->
+    <a name="tpbq"></a>
+    <a href="#T">回到头部</a>
+    <div>
+        <h2>图片标签</h2>
+    <img src="图片路径" alt="关于图片的描述">
+    <!-- 相对路径 -->
+    <img src="./W学习.html" alt="网页的描述">
+    <!-- 绝对路径 -->
+    同级符号：./（可以不写）<br>
+    下一级符号：/<br>
+    上一级：../<br>
+    <!-- 绝对路径分两类，本地绝对路径和网络绝对路径 -->
+    <!-- 本地绝对路径 -->
+    <img src="E:/" alt="本地绝对路径">
+    <!-- 网络相对路径 -->
+    <img src="http://" alt="网络相对路径图片">
+    </div>
+    <!-- 常见的图片格式 -->
+    <a name="tpxs"></a>
+    <a href="#T">回到头部</a>
+    <div>
+        <div>
+            <h3>
+                JPG格式：概述：扩展名为JPG。
+            </h3>
+                特点：支持的颜色丰富，占用的空间较小。不支持透明背景，不支持动态图片。<br>
+                使用场景：对于图片细节没有极高的要求场景
+        </div>
+        <div>
+            <h3>
+            2、PNG格式：扩展名为PNG
+            </h3>
+                一种无损的压缩格式，能够拥有更高质量的保存图片。<br>
+                特点：支持的颜色丰富，占用空间略大，支持透明背景，不支持动态图片<br>
+                使用场景：想让图片有透明背景；向更高质量的呈现图片
+        </div>
+        <div>
+            <h3>
+            3、bmp格式：扩展名为bmp
+            </h3>
+                不支持压缩的一种格式，在最大程度上保留图片更多的细节<br>
+                特点：支持的颜色丰富，保留的细节更多，占用空间极大，支持透明背景，不支持动态图。<br>
+                使用场景：对图片细节要求极高的场景
+        </div>
+        <div>
+            <h3>
+            4、GIF格式：扩展名为GIF，
+            </h3>
+                仅支持256种颜色，色彩呈现不是很完整。<br>
+                特点：支持的颜色觉少，支持简单透明背景，支持动态图。<br>
+                使用场景：网页中的动态图片。
+        </div>
+        <div>
+            <h3>
+            5、webp格式：扩展名为webp，
+            </h3>
+                谷歌推出的一种格式，专门用来网页中呈现图片<br>
+                主要特点：具备上述几种格式的优点，但兼容性不太好，一旦使用务必要解决兼容性问题<br>
+                使用场景：网页中的各种图片。
+        </div>
+        <div>
+            <h3>
+            6、base64：
+            </h3>
+                1·一串特殊的文本，要通过浏览器打开，传统看图应用无法打开。<br>
+                2·原理：把图片进行base64编码，形成一串文本<br>
+                3·如何生成：靠一些工具和网站。<br>
+                4·如何使用：直接作为img标签的src属性的值就可以，并且不受文件位置的影响。<br>
+                5·使用场景：一些较小的图片，或者需要网页一起加载的图片。
+        </div>
+    </div>
+    <!-- 超链接——跳转页面 -->
+     <a name="tzym"></a>
+     <a href="#T">回到头部</a>
+    <div>
+        <div>
+            <h2>超链接（跳转页面）：</h2>
+            从当前页面进行跳转<br>
+            href:要跳转的具体位置。<br>
+            target:跳转时如何打开页面，常用的值如下：<br>
+            _self（在本页签中打开）<br>
+            _blank（在新标签中打开）
+        </div>
+        <div>
+            <h3>示例</h3>
+            <a>a href="https://www.bilibili.com/" target="_blank"（去B站）</a><br>
+            <h5><a href="https://www.bilibili.com/" target="_blank">去B站</a></h5>
+        </div>
+        <div>
+            <h2>
+                不能打开zip的压缩文件<br>
+                强制下载代码<br>
+            </h2>
+            <h6>a href="./W主页.html" download="电影"></h6>
+            <h3>
+                <a href="./W主页.html" download="电影">下载</a>
+            </h3>
+        </div>
+    </div>
+    <!-- 锚点标签 -->
+     <a name="mdbq"></a>
+     <a href="#T">回到头部</a>
+    <div>
+        <h3>锚点标签</h3>
+         添加锚点：a name="简称"<br>
+         快速到锚点：a href="#简称"<br>
+    </div>
+
+    <!-- 列表 -->
+    <div>
+        <h2>列表</h2>
+        <h3>有序列表</h3>
+        <h6>要把大象放冰箱分几步？</h6>
+        <ol>
+            <li>把门打开</li>
+            <li>大象进去</li>
+            <li>关门大吉</li>
+        </ol>
+        <h3>无序列表</h3>
+        <h6>你想去哪？</h6>
+        <ul>
+            <li>山东</li>
+            <li>成都</li>
+            <li>北京</li>
+            <li>上海</li>
+            <li>
+                <span>外滩</span>
+                <ul>
+                    <li>东方明珠</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>自定义列表</h3>
+        <dl>
+            <dt>写好代码</dt>
+            <dd>代码是复杂的</dd>
+        </dl>
+    </div>
+    
+    <!-- 表格 -->
+    <div>
+        <table border="2" width="400" height="200" cellspacing="2" >
+            <!-- 表格标题 -->
+             <caption>学生信息</caption>
+            <!-- 表格头部 -->
+             <thead height="35" align="center">
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>民族</th>
+                    <th>政治面貌</th>
+                </tr>
+             </thead>
+             <!-- 表格主体 -->
+            <tbody align="center">
+                <tr>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>18</td>
+                    <td>汉族</td>
+                    <td>团员</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>女</td>
+                    <td>20</td>
+                    <td>满族</td>
+                    <td>群众</td>
+                </tr>
+                <tr>
+                    <td>王五</td>
+                    <td>男</td>
+                    <td>19</td>
+                    <td>回族</td>
+                    <td>党员</td>
+                </tr>
+            </tbody>
+            <!-- 表格脚注 -->
+             <tfoot height="35" align="center">
+                <tr>
+                    <td>赵六</td>
+                    <td>女</td>
+                    <td>21</td>
+                    <td>壮族</td>
+                    <td>团员</td>
+                </tr>
+             </tfoot>
+        </table>
+    </div>
+    <h3 align="center">跨行与跨列</h3>
+    <a name="khykl"></a>
+    <h6 align="center"><a href="#T">回到头部</a></h6>
+    <!-- 表格 -->
+    <div>
+        <table border="2" width="300" align="center">
+            <thead>
+                <tr>
+                    <td colspan="2">1-1</td>
+                    <td>1-2</td>
+                    <td>1-3</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   <td>2-1</td>
+                   <td rowspan="2">2-2</td>
+                   <td colspan="2">2-3</td>
+                </tr>
+                <tr>
+                    <td>3-1</td>
+                    <td colspan="2">3-3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">4-1</td>
+                    <td>4-2</td>
+                    <td>4-3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- 常用标签 -->
+    <a name="hhbq"></a>
+    <a href="#T" align="center">回到头部</a>
+    <div>
+        <!-- 换行标签 -->
+        <h3 align="center">换行标签</h3>
+        <p align="center">这里是一段文字</p>
+        <br>
+        <p align="center">这里是第二段文字</p>
+        <!-- 分割线 -->
+        <h3 align="center">分割线</h3>
+        <div>第一页</div>
+        <p>11111111111111111111111111111</p>
+        <hr>
+        <div>第二页</div>
+        <p>22222222222222222222222222222</p>
+        <pre>
+                        黑神话·吗喽
+                              ````
+                   ```````````````````````
+              `````````````````````````````````````
+         ````````````````````````````````````````````````
+      ```````````````````````````````````````````````````````
+    ````````````  @@@@  ```````````````````` @@@@ `````````````
+ ````````````````````````````````````````````````````````````````
+ ``````````````````````````````````````````````````````````````````
+ ```````````````````````````````````````````````````````````````````
+ ````````````````````````````````````````````````````````````````````
+ ```````------------------------------------------------`````````````
+ ````````````````````````````````````````````````````````````````````
+`````````````````````````````````````````````````````````````````````
+``````````````````````````````````````````````````````````````````
+```````````````````````````````````````````````````````````````
+   ```````````````````````````````````````````````````````
+     ``````````````````````````````````````````````````
+       ````````````````````````````````````````````
+         `````````````````````````````````````````
+            ```````````````````````````````````
+               ```````````````````````````
+
+
+        </pre>
+    </div>
+
+    <!-- 表单标签 -->
+     <div>
+        <a name="bdbq"></a>
+        <a href="#T">返回头部</a>
+        <h3>表单标签</h3>
+
+        <form action="https://search.jd.com/search" target="_blank" method="get">
+            <input type="text" name="keyword">
+            <button>去京东搜索</button>
+        </form>
+        <h5>基本结构</h5>
+        简单梳理：
+        <table border="2">
+            <thead>
+                <tr>
+                    <td>标签名</td>
+                    <td>标签语义</td>
+                    <td>常用属性</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>form</td>
+                    <td>表单</td>
+                    <td>action:用于指定表单的提交地址（需要与后台人员沟通后确定）<br>
+                        target:用于控制表单提交后，如何打开页面，常用之如下:<br>
+                        _self:在本窗口打开。<br>
+                        _blank:在新窗口打开。<br>
+                        method:用于控制表单的提交凡是，暂时只需了解，在后面Ajax的课程中，会详细简介。
+                    </td>
+                </tr>
+                <tr>
+                    <td>input</td>
+                    <td>输入框</td>
+                    <td>type:设置输入框的类型，目前用到的值是text,表示普通文本。<br>
+                        name:用于指定提交数据的名字（需要与后端人员沟通后确定）
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>button</td>
+                    <td>按钮</td>
+                    <td>本小节暂不涉及</td>
+                </tr>
+            </tfoot>
+        </table>
+        <h5>文本框与密码框</h5>
+        <form action="https://search.jd.com/search" >
+                <a name="H"></a>
+                <fieldset>
+                    <legend>主要信息</legend>
+                    <a href="#o1">文本输入框</a><br>
+                    <label for="zh">账户:</label>
+                    <input id="zh" type="text" name="zh" value="admin" maxlength="10"><br>
+                    <a href="#o2">密码输入框</a><br>
+                    密码:<input type="password" name="pwd" value="123" maxlength="6"><br>
+                    <a href="#o3">单选框</a><br>
+                    性别：
+                    <input type="radio" name="gender" value="male">男
+                    <input type="radio" name="gender" value="female">女<br>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>其他信息</legend>
+                        <a href="#o4">复选框</a><br>
+                        想干什么：
+                        <input type="checkbox" name="hobby" value="Takeoff Building">起飞喽
+                        <input type="checkbox" name="hobby" value="Fly up">飞起来
+                        <input type="checkbox" name="hobby" value="Get out!">滚出去<br>
+                        
+                        <a href="#o4.1">其他：</a>
+                        <textarea name="other" cols="23" rows="3"></textarea><br>
+                        <a name="#H"></a>
+                        
+                        <a href="#o4.2">籍贯：</a>
+                        <select name="place">
+                            <option value="冀">河北</option>
+                            <option value="黑">黑龙江</option>
+                            <option value="鲁">山东</option>
+                            <option value="晋">山西</option>
+                        </select><br>
+                </fieldset>
+               
+                
+                <a href="#o5">隐藏域</a><br>
+                <input type="hidden" name="tag=" value="100">
+                <br>
+                <!-- 确认按钮_第一种写法 -->
+                <a href="#o6"><button>确认</button></a>
+                <!-- 确认按钮_第二种写法 -->
+                <!-- <input type="submit" value="提交值"> -->
+                <!-- 重置按钮_第一种写法 -->
+                <a href="#o7"><button type="reset">重置</button></a>
+                <!-- 重置按钮_第二种写法 -->
+                <!-- <input type="reset" value="重置"> -->
+                <a href="#o8"><button type="button">普通按钮</button></a>
+        </form>
+
+     <div>
+        <h4>2.常用表单控件</h4>
+        <a name="o1"></a>
+        <a href="#H"><h5>①文本输入框</h5></a>
+        <a>imput type="text"</a><br>
+        <a>常用属性如下:</a><br>
+        <a>name属性：数据的名称。</a><br>
+        <a>value属性：输入框的默认输入值。</a><br>
+        <a>maxlength属性：输入框最大可输入长度。</a>
+        
+        <a name="o2"></a>
+        <a href="#H"><h5>②密码输入框</h5></a>
+        <a>input type="password"</a><br>
+        <a>常用属性如下：</a><br>
+        <a>name属性：数据的名称。</a><br>
+        <a>value属性：输入框的默认输入值</a><br>
+        <a>maxlength属性：输入框最大可输入长度</a><br>
+        
+        <a name="o3"></a>
+        <a href="#H"><h5>③单选框</h5></a>
+        <a>input type="radio" name="sex" value="female"</a><br>
+        <a>常用属性如下：</a><br>
+        <a>name属性：数据的名称，注意：想要单选效果，多个radio的name属性值要保持一致。</a><br>
+        <a>value属性：提交的数据值。</a><br>
+        <a>checked属性：让该单选按钮默认选中</a>
+        
+        <a name="o4"></a>
+        <a href="#H"><h5>④复选框</h5></a>
+        <a>input type="checkbox" name="hobby" value="smoke"</a><br>
+        <a>input type="checkbox" name="hobby" value="drink"</a><br>
+        <a>input type="checkbox" name="hobby" value="perm"</a><br>
+        <a>常用属性如下：</a><br>
+        <a>name属性：数据的名称。</a><br>
+        <a>value属性：提交的数据值。</a><br>
+        <a>checked属性：让该复选框默认选中。</a>
+        
+        <a name="o5"></a>
+        <a href="#H"><h5>⑤隐藏域</h5></a>
+        <a>input type="hidden" name"tag" value="100"</a><br>
+        <a>用户不可见的一个输入区域，作用是“提交表单的时候，携带一些固定的数据</a><br>
+        <a>name属性：指定数据的名称。</a><br>
+        <a>value属性：指定的是真正提交的数据</a>
+        
+        <a name="o6"></a>
+        <a href="#H"><h5>⑥提交按钮</h5></a>
+        <a>input type="submit" value="提交"</a><br>
+        <a>button 点我提交表单 button</a><br>
+        <a>注意：</a>
+        <ol>
+            <li>button标签type属性的默认值为submit</li>
+            <li>button不要指定name属性</li>
+            <li>input标签编写按钮，使用value属性指定按钮文字</li>
+        </ol>
+        
+        <a name="o7"></a>
+        <a href="#H"><h5>⑦重置按钮</h5></a>
+        <a>input type="reset" value="重置"</a><br>
+        <a>button type="reset" </a>
+        <a>注意：</a>
+        <ol>
+            <li>button不要指定name属性</li>
+            <li>input标签编写的按钮，使用value属性指定按钮文字</li>
+        </ol>
+
+        <a name="o8"></a>
+        <a href="#H"><h5>⑧普通按钮</h5></a>
+        <a>input type="button" value="普通按钮"</a><br>
+        <a>button type="button"</a><br>
+        <a>注意：普通按钮的type值为button，若不写type值是submit会引起表单的提交</a>
+        
+        <a name="o4.1"></a>
+        <a href="#H"><h5>⑨文本域</h5></a>
+        <a>textarea name="msg" rows="值" cols="值"</a><br>
+        <a>常用属性如下：</a>
+        <ol>
+            <li>row属性：指定默认显示的行数，会影响文本域的高度</li>
+            <li>cols属性：指定默认显示的列数，会影响文本域的宽度</li>
+            <li>不能编写type属性，其他属性，与普通文本输入框一致</li>
+        </ol>
+        
+        <a name="o4.2"></a>
+        <a href="#H"><h5>⑩下拉框</h5></a>
+        <a>select name="from"</a><br>
+        <a>option value="黑"</a><br>
+        <a>option value="鲁" selected（默认）</a><br>
+        <a>常用属性及注意事项：</a>
+        <ol>
+            <li>name属性：指定数据的名称</li>
+            <li>option标签设置value属性，如果没有value属性，提交的数值是option中间的数字；如果设置了value属性，提交的数据就是value的值（建议设置value属性</li>
+            <li>option标签设置了selected属性，表示默认选中</li>
+        </ol>
+
+        <h5>禁用表单控件</h5>
+        <a>给表单标签设置disabled既可以禁用表单控件</a><br>
+        <a>input、textarea、button、select、option都可以设置disabled属性</a>
+
+        <h5>关联焦点lable</h5>
+        <a>lable标签可与表单控件相关联，关联之后点击文字，与之对应的表单控件就会获取焦点</a>
+        <ol>
+            <li>让lable标签的for属性的值等于表单控件的id</li>
+            <li>把表单控件套在label标签的里面</li>
+        </ol>
+        <a>lable for="name" lable</a><br>
+        <a>属性值 id="name"</a><br>
+        <a>lable中for值与id值对应就可以实现焦点功能</a>
+
+        <h5>表单fieldset和legend</h5>
+        <a>fieldset
+                legend（信息）legend
+            fieldset
+        </a>
+     </div>
+     </div>
+
+    <!-- 框架标签 -->
+     <div>
+        <a name="kjbq"></a>
+        <a href="#T"><h3>框架标签</h3></a>
+
+    <!-- 与超链接的target属性配合使用 -->
+        <h3 align="center"><a href="https://www.bilibili.com/video/BV1ne411272q/?spm_id_from=333.788.recommend_more_video.2&vd_source=ce3605518ff6551f4f1bb7eccbc82792" target="hh">点我看小姐姐</a></h3><br>
+        <iframe name="hh" frameborder="0" width="800" height="500"></iframe>
+
+
+    <!-- 与表单的target属性配合使用 -->
+     <form action="https://so.toutiao.com/search" target="con">
+        <input type="text" name="keyword">
+        <input type="submit" value="搜索">
+     </form>
+     <iframe name="con" frameborder="0" width="1000" height="500"></iframe>
+    </div>
+
+    <!-- 字符实体 -->
+     <div>
+        <a name="zfst"></a>
+        <a href="#T"><h3>字符实体</h3></a>
+        <div>我 帅哥</div>
+        <div>我&nbsp;&nbsp;&nbsp;&nbsp;帅哥</div>
+        <div>我&#160;帅哥</div>
+        <div>我们学习过很多的标题标签，其中&lt;h1&gt;最厉害的一个</div>
+        <div>我们今天学习了一个可以表示空格的字符实体，它是:&amp;nbsp;</div>
+        <div>我们今天学习了一个可以表示&的字符实体，它是:&amp;amp;</div>
+        <div>当前商品价格是：¥299</div>
+        <div>当前商品价格是：&yen;299</div>
+        <div>©版权所有</div>
+        <div>&copy;版权所有</div>
+        <div>2 &times; 2 = 4</div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>常见字符实体总结</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>描述</td>
+                    <td>实体名称</td>
+                    <td>实体编号</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>空格</td>
+                    <td>&amp;nbsp;</td>
+                    <td>&amp;#160;</td>
+                </tr>
+                <tr>
+                    <td><</td>
+                    <td>小于号</td>
+                    <td>&amp;lt;</td>
+                    <td>&amp;#60;</td>
+                </tr>
+                <tr>
+                    <td>></td>
+                    <td>大于号</td>
+                    <td>&amp;gt;</td>
+                    <td>&amp;#62;</td>
+                </tr>
+                <tr>
+                    <td>&</td>
+                    <td>和号</td>
+                    <td>&amp;amp;</td>
+                    <td>&amp;#38;</td>
+                </tr>
+                <tr>
+                    <td>"</td>
+                    <td>引号</td>
+                    <td>&amp;quot;</td>
+                    <td>&amp;#34</td>
+                </tr>
+                <tr>
+                    <td>`</td>
+                    <td>反引号</td>
+                    <td>&amp;acute;</td>
+                    <td>&amp;#180;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>分（cent）</td>
+                    <td>&amp;cent;</td>
+                    <td>&amp;#162;</td>
+                </tr>
+                <tr>
+                    <td>£</td>
+                    <td>镑（pound）</td>
+                    <td>&amp;pound;</td>
+                    <td>&amp;#163;</td>
+                </tr>
+                <tr>
+                    <td>¥</td>
+                    <td>元（yen）</td>
+                    <td>&amp;yen;</td>
+                    <td>&amp;#165;</td>
+                </tr>
+                <tr>
+                    <td>€</td>
+                    <td>欧元（euro）</td>
+                    <td>&amp;euro;</td>
+                    <td>&amp;#8364;</td>
+                </tr>
+                <tr>
+                    <td>©</td>
+                    <td>版权（copyright）</td>
+                    <td>&amp;copy;</td>
+                    <td>&amp;#169;</td>
+                </tr>
+                <tr>
+                    <td>®</td>
+                    <td>注册商标</td>
+                    <td>&amp;reg;</td>
+                    <td>&amp;#174;</td>
+                </tr>
+                <tr>
+                    <td>™</td>
+                    <td>商标</td>
+                    <td>&amp;trade;</td>
+                    <td>&amp;#8482;</td>
+                </tr>
+                <tr>
+                    <td>×</td>
+                    <td>乘号</td>
+                    <td>&amp;times;</td>
+                    <td>&amp;#215;</td>
+                </tr>
+                <tr>
+                    <td>÷</td>
+                    <td>除号</td>
+                    <td>&amp;divide;</td>
+                    <td>&amp;#247;</td>
+                </tr>
+            </tbody>
+        </table>
+     </div>
+
+    <!-- 全局属性 -->
+    <div>
+        <a name="qjsx"></a>
+        <a href="#T"><h3>常用的全局属性</h3></a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>属性名</td>
+                    <td>含义</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>给标签指定唯一标识，注意：id是不能重复的。<br>
+                        作用：可以让label标签与表单控件相关联；也可以与CSS、JAVAScipt配合使用<br>
+                        注意：不能在以下HTML元素使用：<br>
+                        注意：不能在以下HTML元素使用<br>
+                        head、html、meta、script、style、title
+                    </td>
+                </tr>
+                <tr>
+                    <td>class</td>
+                    <td>给标签制定类型名，随后通过CSS就可以给标签设置样式</td>
+                </tr>
+                <tr>
+                    <td>style</td>
+                    <td>给标签设置CSS样式</td>
+                </tr>
+                <tr>
+                    <td>dir</td>
+                    <td>内容的方向；值：ltr、rtl<br>
+                        注意：不能再一下HTML元素中使用：<br>
+                        head、html、meta、script、style、title
+                    </td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>给标签设置一个文字提示，一般超链接和图片用的比较多</td>
+                </tr>
+                <tr>
+                    <td>lang</td>
+                    <td>给标签指定语言<br></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
